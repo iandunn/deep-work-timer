@@ -31,6 +31,9 @@ const app = {
 				app.stopwatchID = setInterval( app.updateTimer, 500 );
 				app.activeTimer = timer;
 
+				// This helps reinforce which mode you're in, without having to switch the active tab.
+				document.title = timer.parentElement.querySelector( 'h2' ).innerText + ' - Deep Work Timer';
+
 			} else {
 				timer.innerHTML = '00:00:00';
 			}
