@@ -28,7 +28,7 @@ const app = {
 		for ( timer of timers ) {
 			if ( timer.parentElement.id === event.target.parentElement.id ) {
 				app.startTime   = Date.now();
-				app.stopwatchID = setInterval( app.updateTimer, 1000 );
+				app.stopwatchID = setInterval( app.updateTimer, 500 );
 				app.activeTimer = timer;
 
 			} else {
