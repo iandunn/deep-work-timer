@@ -1,0 +1,96 @@
+<html>
+
+<!--
+todo:
+- proper html doctype, head tags, etc. just copy wp theme
+- convert to react project? that's overkill? yeah. using native es6 is fine though
+-->
+
+<head>
+	<title>Deep Work Timer</title>
+
+	<script src="timer.js"></script>
+
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+		}
+
+			/*todo
+			body.focusing {
+				background-color: blue;
+			}
+
+			body.checking {
+				background-color: orange;
+			}
+
+			body.resting{}
+			*/
+
+		.container {
+			margin: 20px;
+			margin-top: 5%;
+			padding: 20px;
+			color: white;
+			text-align: center;
+		}
+
+		#deep-work-container {
+			background-color: #20209f;
+		}
+
+		#shallow-work-container {
+			background-color: #b5730d;
+		}
+
+		#break-container {
+			background-color: #055605;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="shallow-work-container" class="container">
+		<h2>Check Slack/p2/phone</h2>
+
+		<p class="timer-value">
+			00:00:00
+		</p>
+
+		<button class="start-timer">
+			Start checking
+		</button>
+	</div>
+
+	<div id="deep-work-container" class="container">
+		<h2>Focus on Deep Work</h2>
+
+		<p class="timer-value">
+			00:00:00
+		</p>
+
+		<button class="start-timer">
+			Start Deep Work
+		</button>
+	</div>
+
+	<!--
+	do you really want this? probably better to just take breaks throughout deep work w/out the hassle of tracking them
+
+	<div id="break-container" class="container">
+		<h2>Rest without consuming</h2>
+
+		<p class="timer-value">
+			00:00:00
+		</p>
+
+		<button class="start-timer">
+			Start Break
+		</button>
+	</div>
+	-->
+</body>
+
+</html>
