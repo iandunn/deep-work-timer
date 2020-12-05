@@ -12,14 +12,16 @@ const app = {
 	stopwatchID : null,
 	activeTimer : null,
 
+	// register event handlers, etc
 	init: () => {
-		const buttons = document.querySelectorAll( 'button.start-timer' );
+		const startButtons  = document.querySelectorAll( 'button.start-timer' );
 
-		buttons.forEach( element => {
-			element.addEventListener( 'click', app.toggleTimers );
+		startButtons.forEach( button => {
+			button.addEventListener( 'click', app.toggleTimers );
 		} );
 	},
 
+	// start one timer, stop the other
 	toggleTimers: ( event ) => {
 		const timers = document.querySelectorAll( '.timer-value' );
 
@@ -40,9 +42,10 @@ const app = {
 		}
 	},
 
+	// print the elapsed time. callback for `setInterval()`
 	updateTimer: () => {
 		const elapsedSeconds = Date.now() - app.startTime;
 
 		app.activeTimer.innerHTML = new Date( elapsedSeconds ).toISOString().substr( 11, 8 );
-	}
+	},
 }

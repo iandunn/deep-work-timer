@@ -3,7 +3,19 @@
 <!--
 todo:
 - proper html doctype, head tags, etc. just copy wp theme
-- convert to react project? that's overkill? yeah. using native es6 is fine though
+- change the bg color according to which state is active, so you can know just by glancing at it
+- add tooltips instead of or in-addition-to some important & unfamiliar concepts links
+	task-negative
+		https://open.spotify.com/episode/3Xvn7ebdH6evLNmS6FskeP - 28:51 . if link to note that it's kinda skeezy
+		https://www.nytimes.com/2014/08/10/opinion/sunday/hit-the-reset-button-in-your-brain.html
+		similar to manoush's "bored and brilliant"
+	context switching
+- should mention flow somewhere as synonymous with deep work
+
+low priority:
+- maybe put instructions in sidebar rather than on top. grid layout
+- at a later iteration, use css animatino when switching. don't get distracted wth that for v1 though, just get the core part working
+- choose more appealing colors. maybe just copy from wp's color scheme.
 -->
 
 <head>
@@ -13,6 +25,11 @@ todo:
 
 	<style>
 		body {
+			max-width: 600px;
+			margin: 2em auto;
+		}
+
+		#timers-container {
 			display: flex;
 			justify-content: center;
 		}
@@ -48,32 +65,81 @@ todo:
 		#break-container {
 			background-color: #055605;
 		}
+
+		code {
+			background-color: #e6e6e6;
+			padding: 2px 5px;
+			/* todo round corners, or just copy gutenberg editor styles */
+		}
 	</style>
 </head>
 
 <body>
-	<div id="shallow-work-container" class="container">
-		<h2>Check Slack/p2/phone</h2>
+	<h1>Deep Work Timer</h1>
+	<h4>minimal, on purpose.</h4>
+	<!-- todo is that right semantically? want it to be a subtitle. also want it small text, but could do w/ css -->
 
-		<p class="timer-value">
-			00:00:00
-		</p>
+	<h2>instructions</h2>
 
-		<button class="start-timer">
-			Start checking
-		</button>
-	</div>
+	 <!-- todo tmp open to work on editing,
+	  maybe also leave open for a week or so in order to help keep this a habit
+	  maybe make a feature for that like, open by default, but then can click a "its a habit now" button to set a cookie, and then it'd be closed by default
+	  -->
+	<details id="instructions" open>
+		<summary>
+			This is the process that works for me, but your mileage may vary. Customize it to work for you.
+			<em>(click to expand)</em>
+				<!-- if you have to explain it, that's a smell -->
+		</summary>
 
-	<div id="deep-work-container" class="container">
-		<h2>Focus on Deep Work</h2>
+		<ol>
+			<li>
+				<strong>Start your day</strong> by clicking <code>Start Checking</code>, then open Slack, p2s, your phone, etc. When you've gone through the important stuff, close Slack or put it into do-not-disturb mode [link], put your phone on silent mode, and place it upside down or in a drawer.
+			</li>
 
-		<p class="timer-value">
-			00:00:00
-		</p>
+			<li>
+				Click <code>Start Deep Work</code>. Start working on a project, and focus on it until you reach a milestone, get tired, are ready for something new, etc.
+			</li>
 
-		<button class="start-timer">
-			Start Deep Work
-		</button>
+			<li><strong>When you're tempted to self-interrupt</strong> and check Slack/etc, resist that, and refocus on the project. If you feel anxious about missing something, resist that. It's fine, because you're just AFK for a defined block of time. Once that block is done, you can check stuff again. Everything will still be there. If something is truly an emergency, your team can push through DnD mode [link].
+			</li>
+
+			<li><strong>When you feel like you need a break</strong>, take one. There's no need to stop the timer. <strong>Pick a <em><a href="https://www.washingtonpost.com/news/inspired-life/wp/2015/03/10/your-sweet-spot-how-to-become-more-productive-while-actually-working-less/">task-negative</a></em> thing to do</strong> <em>-- like laying down and closing your eyes, going for a walk, making a cup of tea, washing the dishes, etc --</em> so that your mind can process the things you've just been working on. If you do something <em>task-positive</em> <em>-- like watching a YouTube video, playing a game on your phone, etc --</em> then you'll be putting new stuff into your brain; you won't get the insights and from processing, you'll make yourself <em>more</em> tired rather than less, and you'll have to context-switch [link] when you start working again. When you're feeling rested, don't check anything, just sit back down and pick up where you left off on the project.
+
+			</li>
+
+			<li>
+				<strong>After you've made meaningful progress</strong>, feel ready for something new, or it's been 3+ hours, write down a brain dump of where you are in the project, and what the next steps are. Then, click the <code>Start Checking</code> button, open Slack/etc, and go through the important stuff. If you're checking for a long period of time, you can take (task-negative) breaks during it too.
+			</li>
+
+			<li><strong>Repeat</strong> the whole process until you're done with your day.</li>
+		</ol>
+	</details>
+
+	<div id="timers-container">
+		<div id="shallow-work-container" class="container">
+			<h2>Check Slack/p2/phone</h2>
+
+			<p class="timer-value">
+				00:00:00
+			</p>
+
+			<button class="start-timer">
+				Start checking
+			</button>
+		</div>
+
+		<div id="deep-work-container" class="container">
+			<h2>Focus on Deep Work</h2>
+
+			<p class="timer-value">
+				00:00:00
+			</p>
+
+			<button class="start-timer">
+				Start Deep Work
+			</button>
+		</div>
 	</div>
 
 	<!--
