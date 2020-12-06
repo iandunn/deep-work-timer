@@ -23,12 +23,11 @@ const app = {
 
 	// start one timer, stop the other
 	toggleTimers: ( event ) => {
-		const timers = document.querySelectorAll( '.timer-value' );
-
+		const timers = document.querySelectorAll( '.elapsed-time' );
 		clearInterval( app.stopwatchID );
 
 		for ( timer of timers ) {
-			if ( timer.parentElement.id === event.target.parentElement.id ) {
+			if ( timer.dataset.timerId === event.target.dataset.timerId ) {
 				app.startTime   = Date.now();
 				app.stopwatchID = setInterval( app.updateTimer, 500 );
 				app.activeTimer = timer;
