@@ -3,7 +3,6 @@
 <!--
 todo:
 - proper html doctype, head tags, etc. just copy wp theme
-- change the bg color according to which state is active, so you can know just by glancing at it
 - add tooltips instead of or in-addition-to some important & unfamiliar concepts links
 	task-negative
 		https://open.spotify.com/episode/3Xvn7ebdH6evLNmS6FskeP - 28:51 . if link to note that it's kinda skeezy
@@ -21,66 +20,8 @@ low priority:
 <head>
 	<title>Deep Work Timer</title>
 
+	<link rel="stylesheet" type="text/css" href="styles.css" />
 	<script src="timer.js"></script>
-
-	<style>
-		body {
-			max-width: 600px;
-			margin: 2em auto;
-		}
-
-		h1 {
-			margin-bottom: 0;
-		}
-
-		#subtitle {
-			margin-top: 0;
-			font-style: italic;
-		}
-
-		#timers-container {
-			display: flex;
-			justify-content: center;
-		}
-
-			/*todo
-			body.focusing {
-				background-color: blue;
-			}
-
-			body.checking {
-				background-color: orange;
-			}
-
-			body.resting{}
-			*/
-
-		.container {
-			margin: 20px;
-			margin-top: 5%;
-			padding: 20px;
-			color: white;
-			text-align: center;
-		}
-
-		#deep-work-container {
-			background-color: #20209f;
-		}
-
-		#shallow-work-container {
-			background-color: #b5730d;
-		}
-
-		#break-container {
-			background-color: #055605;
-		}
-
-		code {
-			background-color: #e6e6e6;
-			padding: 2px 5px;
-			/* todo round corners, or just copy gutenberg editor styles */
-		}
-	</style>
 </head>
 
 <body>
@@ -96,7 +37,7 @@ low priority:
 	  maybe also leave open for a week or so in order to help keep this a habit
 	  maybe make a feature for that like, open by default, but then can click a "its a habit now" button to set a cookie, and then it'd be closed by default
 	  -->
-	<details id="instructions" open>
+	<details id="instructions">
 		<summary>
 			This is the process that works for me, but your mileage may vary. Customize it to work for you.
 			<em>(click to expand)</em>
@@ -152,22 +93,6 @@ low priority:
 			</button>
 		</div>
 	</div>
-
-	<!--
-	do you really want this? probably better to just take breaks throughout deep work w/out the hassle of tracking them
-
-	<div id="break-container" class="container">
-		<h2>Rest without consuming</h2>
-
-		<p class="timer-value">
-			00:00:00
-		</p>
-
-		<button class="start-timer">
-			Start Break
-		</button>
-	</div>
-	-->
 </body>
 
 </html>

@@ -1,0 +1,63 @@
+/*
+ * The deep work colors are intentionally soothing, to provide a subtle sense of relief when a checking session
+ * ends and a deep work session begins.
+ */
+
+body {
+	max-width: 600px;
+	margin: 2em auto;
+}
+
+	body.active-checking {
+		background-color: #FFE39A;
+		transition: background-color 1.5s ease;
+	}
+
+	body.active-deep-work {
+		background-color: #7ea3b5;
+		transition: background-color 1.5s ease;
+	}
+
+h1 {
+	margin-bottom: 0;
+}
+
+#subtitle {
+	margin-top: 0;
+	font-style: italic;
+}
+
+#timers-container {
+	display: flex;
+	justify-content: center;
+}
+
+.container {
+	margin: 20px;
+	margin-top: 5%;
+	padding: 20px;
+	text-align: center;
+	color: white;
+	border-radius: .5em;
+}
+
+#deep-work-container {
+	background-color: #103F53;
+}
+
+#shallow-work-container {
+	background-color: #b5730d;
+}
+
+.start-timer {
+	font-size: 1em;
+	padding: .5em 1em;
+	border-radius: .5em;
+	border: 1px solid gray;
+}
+
+code {
+	background-color: #e6e6e6;
+	padding: 2px 5px;
+	/* todo round corners, or just copy gutenberg editor styles */
+}
