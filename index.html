@@ -29,6 +29,15 @@ low priority:
 			margin: 2em auto;
 		}
 
+		h1 {
+			margin-bottom: 0;
+		}
+
+		#subtitle {
+			margin-top: 0;
+			font-style: italic;
+		}
+
 		#timers-container {
 			display: flex;
 			justify-content: center;
@@ -76,7 +85,9 @@ low priority:
 
 <body>
 	<h1>Deep Work Timer</h1>
-	<h4>minimal, on purpose.</h4>
+	<h4 id="subtitle">
+		minimal, on purpose.
+	</h4>
 	<!-- todo is that right semantically? want it to be a subtitle. also want it small text, but could do w/ css -->
 
 	<h2>instructions</h2>
