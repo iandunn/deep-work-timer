@@ -5,7 +5,8 @@
 
 body {
 	max-width: 600px;
-	margin: 2em auto;
+	margin: 0 auto;
+	padding: 25px;
 }
 
 	body.active-checking {
@@ -26,6 +27,14 @@ h1 {
 	margin-top: 0;
 	font-style: italic;
 }
+
+#instructions ol {
+	padding-left: 1em;
+}
+
+	#instructions li {
+		padding-bottom: 5px;
+	}
 
 #timers-container {
 	display: flex;
