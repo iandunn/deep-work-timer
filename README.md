@@ -1,15 +1,15 @@
 # Deep Work Timer
 
-An intentionally minimal, unintrusive, and low-overhead timer to help me focus on deep work for long periods of time, without interruptions.
+An intentionally minimal, unintrusive, and low-effort timer to help me focus on [deep work](https://www.fastcompany.com/90368975/what-is-deep-work-and-how-do-you-achieve-it) & [flow state](https://www.bbc.com/worklife/article/20190204-how-to-find-your-flow-state-to-be-peak-creative) for long periods of time, without interruptions.
 
-[Check out the demo](https://iandunn.github.io/deep-work-timer/) to try it.
+It's a simple web page, so [you can use it right now](https://iandunn.github.io/deep-work-timer/).
 
 
-## how it works
+## How it Works
 
-instructions are in the app itself, [check out the demo](https://iandunn.github.io/deep-work-timer/) to see them.
+Instructions are in the timer itself, so that they're easy to access while using it. [Open the timer](https://iandunn.github.io/deep-work-timer/) to read them.
 
-## why it works that way
+## Why it Works That Way
 
 * **No Interruptions:** Other timers I've used would interrupt me once an arbitrary time limit was reached, which is frustrating when I'm in the middle of a thought, or [mentally juggling a complex problem](https://heeris.id.au/2013/this-is-why-you-shouldnt-interrupt-a-programmer/), or just aren't ready to take a break yet.
 
