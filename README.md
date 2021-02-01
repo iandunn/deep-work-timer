@@ -1,6 +1,6 @@
 # Deep Work Timer
 
-An intentionally minimal, unintrusive, and low-effort timer to help me focus on [deep work](https://www.fastcompany.com/90368975/what-is-deep-work-and-how-do-you-achieve-it) & [flow state](https://www.bbc.com/worklife/article/20190204-how-to-find-your-flow-state-to-be-peak-creative) for long periods of time, without interruptions.
+An intentionally minimal, unobtrusive, and low-effort timer to help me focus on [deep work](https://www.fastcompany.com/90368975/what-is-deep-work-and-how-do-you-achieve-it) & [flow state](https://www.bbc.com/worklife/article/20190204-how-to-find-your-flow-state-to-be-peak-creative) for long periods of time, without interruptions.
 
 It's a simple web page, so [you can use it right now](https://iandunn.github.io/deep-work-timer/).
 

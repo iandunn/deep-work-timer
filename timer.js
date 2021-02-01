@@ -5,8 +5,6 @@
  * popup confirm() modal if deep work < 1 hour, or something
  */
 
-document.addEventListener( 'DOMContentLoaded', () => app.init() );
-
 const app = {
 	startTime   : 0,
 	stopwatchID : null,
@@ -57,3 +55,5 @@ const app = {
 		app.activeTimer.innerHTML = new Date( elapsedSeconds ).toISOString().substr( 11, 8 );
 	},
 }
+
+app.init();
